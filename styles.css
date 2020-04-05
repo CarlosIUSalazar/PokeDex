@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
 
 *{
@@ -6,8 +7,8 @@
 
 body {
     background: #EFEFBB;
-    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-    background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+	background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+	background: linear-gradient(to right, #D4D3DD, #EFEFBB);
 
     display: flex;
     flex-direction: column;
@@ -34,17 +35,17 @@ h1 {
     background-color: #eee;
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(100,100,100,0.5);
-    padding: 20px;
     margin: 10px;
+    padding: 20px;
     text-align: center;
 }
 
 .pokemon .img-container {
     background-color: rgba(255,255,255,0.6);
     border-radius: 50%;
-    margin-top: 20px;
     height: 120px;
-    width: 120%;
+    width: 120px;
+    text-align: center;
 }
 
 .pokemon .img-container img {
@@ -57,7 +58,7 @@ h1 {
 }
 
 .pokemon .number {
-    background-color: #fff;
+    background-color: rgba(0,0,0,0.1);
     border-radius: 10px;
     font-size: 0.8em;
     padding: 5px 10px;
@@ -67,3 +68,25 @@ h1 {
     margin: 15px 0 7px;
     letter-spacing: 1px;
 }
+
+
+
+/* SOCIAL PANEL CSS */
+/* .floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 0px 10px 0px 10px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(0%);
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+} */
+
+

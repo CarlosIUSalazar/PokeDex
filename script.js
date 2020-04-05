@@ -19,25 +19,22 @@ const colors = {
 
 const main_types = Object.keys(colors);
 
-console.log(main_types);
+//console.log(main_types);
 
 const fetchPokemons = async () => {
     for(let i = 1; i <= pokemons_number; i++){
         await getPokemon(i);
     }
-}
+};
 
 const getPokemon = async id => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const res = await fetch(url);
     const pokemon = await res.json();
-    console.log(pokemon);
+    //console.log(pokemon);
     createPokemonCard(pokemon);
 }
 
-fetchPokemons()
-
-//getPokemon(1)
 function createPokemonCard(pokemon) {
     const pokemonEl = document.createElement('div');
     pokemonEl.classList.add('pokemon');
@@ -52,8 +49,9 @@ function createPokemonCard(pokemon) {
     pokemonEl.style.backgroundColor = color;
 
     const pokeInnerHTML = `
-        <div class="img-container"></div>
-            <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" /></div>
+        <div class="img-container">
+            <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="${name}" />
+            </div>
         <div class="info">
             <span class="number">#${pokemon.id.toString().padStart(3,'0')} </span>
             <h3 class="name">${name}</h3>
@@ -65,3 +63,22 @@ function createPokemonCard(pokemon) {
 
     poke_container.appendChild(pokemonEl);
 }
+
+fetchPokemons()
+
+
+
+
+
+// // SOCIAL PANEL JS
+// const floating_btn = document.querySelector('.floating-btn');
+// const close_btn = document.querySelector('.close-btn');
+// const social_panel_container = document.querySelector('.social-panel-container');
+
+// floating_btn.addEventListener('click', () => {
+// 	social_panel_container.classList.toggle('visible')
+// });
+
+// close_btn.addEventListener('click', () => {
+// 	social_panel_container.classList.remove('visible')
+// });
